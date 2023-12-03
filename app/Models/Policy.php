@@ -29,6 +29,7 @@ class Policy extends Model
         'policy_type_id', //Policy Type
         'insurer_id', //Insurer
         'insurance_id', //Product
+        'insurance_ref', //InsurerPolicyNumber
         'original_policy_ref', //Root Policy Ref
     ];
 }

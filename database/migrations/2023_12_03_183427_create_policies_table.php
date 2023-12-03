@@ -41,6 +41,7 @@ return new class extends Migration
             $table->foreign('insurer_id')->references('id')->on('insurers')->onDelete('cascade');
             $table->unsignedBigInteger('insurance_id');
             $table->foreign('insurance_id')->references('id')->on('insurances')->onDelete('cascade');
+            $table->string('insurance_ref');
             $table->string('original_policy_ref');
             $table->timestamps();
         });
