@@ -70,8 +70,8 @@ return [
         'Underwriter',
     ],
     'insurance_id' => [
-        'InsurancePlan',
         'Product',
+        'InsurancePlan',
     ],
     'insurance_ref' => [
         'InsurerPolicyNumber',
@@ -79,6 +79,6 @@ return [
     ],
     'original_policy_ref' => [
         'RootPolicyRef',
-        'InsurancePlan',
+        'PrimaryPolicyRef',
     ],
 ];
