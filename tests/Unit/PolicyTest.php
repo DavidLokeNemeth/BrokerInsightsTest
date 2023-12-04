@@ -65,6 +65,7 @@ class PolicyTest extends TestCase
             'policy_type_id' => $policyType->id,
             'insurer_id' => $insurer->id,
             'insurance_id' => $insurance->id,
+            'insurance_ref' => 'Test Insurance Reference',
             'original_policy_ref' => 'Test original Reference',
         ];
 
