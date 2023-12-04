@@ -49,6 +49,7 @@ Execute Tests:
     - To import first broker data, run the following command: `php artisan broker:import broker1.csv "Broker No1"`
     - To import second broker data, run the following command: `php artisan broker:import broker2.csv "Broker No2"`
     - These commands import data from the CSV.
+    - To import new broker data, copy the csv file to the storage/app folder and run the following command: `php artisan broker:import [csvFileName] [brokerName]` When a new broker start to do a import, the system ask help for the header mapping, but then import from that point all CSV. 
 
 3. Display report:
     - To display report on all broker, run the following command: `php artisan broker:report`
