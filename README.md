@@ -1,12 +1,12 @@
-#Broker Insights Challenge
+# Broker Insights Challenge
 
-##Challenge Description:
+## Challenge Description:
 Your task is to create a command-line tool or a web application that aggregates insurance policy
 data from multiple brokers, each providing data in different formats. The goal is to normalise the
 data into a consistent format, provide basic insights into the aggregated policies, and ensure the
 solution is well-tested.
 
-##Requirements:
+## Requirements:
 1. Data Ingestion:
     - Assume you have two mock data sources, each representing an insurance broker,
       providing data in CSV format (sample data provided below).
