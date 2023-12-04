@@ -60,6 +60,7 @@ class Policy extends Model
         'policy_type_id' => 'required|integer',
         'insurer_id' => 'required|integer',
         'insurance_id' => 'required|integer',
+        'insurance_ref' => 'required|string',
         'original_policy_ref' => 'required|string',
     ];
 
