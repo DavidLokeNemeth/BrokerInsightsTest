@@ -74,6 +74,6 @@ class PolicyTest extends TestCase
 
         // Assert
         $this->assertInstanceOf(Policy::class, $policy);
-        $this->assertDatabaseHas('policy', $policyData);
+        $this->assertDatabaseHas('policies', $policyData);
     }
 }
