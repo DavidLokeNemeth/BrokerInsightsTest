@@ -64,14 +64,14 @@ class Policy extends Model
         'original_policy_ref' => 'required|string',
     ];
 
-    public function totalPolicy(?Broker $broker=null):int
+    public function totalPolicy(?Broker $broker=null):?int
     {
         if($broker) return $this::where('broker_id', $broker->id)->count();
 
         return $this->count();
     }
 
-    public function totalCustomer(?Broker $broker=null):int
+    public function totalCustomer(?Broker $broker=null):?int
     {
         $query =  $this::distinct();
         if($broker) $query-> where('broker_id', $broker->id);
@@ -79,21 +79,21 @@ class Policy extends Model
         return $query->count('client_ref');
     }
 
-    public function totalAmount(?Broker $broker=null):int
+    public function totalAmount(?Broker $broker=null):?int
     {
         if($broker) return $this::where('broker_id', $broker->id)->sum('coverage_amount');
 
         return $this->sum('coverage_amount');
     }
 
-    public function averageDayLength(?Broker $broker=null):float
+    public function averageDayLength(?Broker $broker=null):?float
     {
         if($broker) return $this::where('broker_id', $broker->id)->avg(DB::raw('DATEDIFF(end_date, start_date)'));
 
         return $this->avg(DB::raw('DATEDIFF(end_date, start_date)'));
     }
 
-    public function activePolicies(?Broker $broker=null):int
+    public function activePolicies(?Broker $broker=null):?int
     {
         $sql = 'select count(*) as aggregate from `policies` where CURRENT_DATE between start_date and end_date';
         if($broker) $sql .=' AND broker_id = '.$broker->id;
